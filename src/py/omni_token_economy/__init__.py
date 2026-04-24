@@ -2,8 +2,8 @@
 
 from .compact import (
     compact_record,
-    compact_records,
     compact_record_with_telemetry,
+    compact_records,
     compact_secret,
     compact_secrets,
     compress_context,
