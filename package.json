@@ -1,0 +1,49 @@
+{
+  "name": "@omniforge/omni-token-economy",
+  "version": "0.1.0",
+  "description": "Biblioteca universal de compactação de tokens para aplicações LLM. Zero lock-in de backend.",
+  "keywords": [
+    "llm",
+    "tokens",
+    "compact",
+    "claude",
+    "openai",
+    "compression",
+    "context",
+    "mcp"
+  ],
+  "license": "MIT",
+  "author": "OmniForge <jesse.freitas@omniforge.com.br>",
+  "homepage": "https://github.com/jessefreitas/omni-token-economy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessefreitas/omni-token-economy.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench": "tsx benchmarks/run.ts",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.8"
+  }
+}
