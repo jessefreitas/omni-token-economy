@@ -54,8 +54,8 @@ jobs:
             "https://github.com/zricethezav/gitleaks/releases/download/v${GL_VERSION}/gitleaks_${GL_VERSION}_linux_x64.tar.gz"
           tar -xzf /tmp/gitleaks.tar.gz -C /tmp
           sudo mv /tmp/gitleaks /usr/local/bin/gitleaks
-      - name: Scan full repository
-        run: gitleaks detect --source . --redact --verbose --exit-code 1
+      - name: Scan working tree (prevent NEW leaks)
+        run: gitleaks detect --source . --no-git --redact --verbose --exit-code 1
 
   # CodeQL: desabilitado em repo private sem GitHub Advanced Security addon.
   # Reativar quando repo tornar-se público ou GHAS for contratado.
